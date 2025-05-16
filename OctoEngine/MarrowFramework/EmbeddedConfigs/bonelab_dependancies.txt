@@ -1,0 +1,16 @@
+Il2Cpp*
+Unity*
+BoneLib
+FieldInjector
+MelonLoader
+Microsoft.*
+Mono.*
+Tomlet
+WebSocketDotNet
+AsmResolver*
+Assembly-CSharp
+AssetRipper*
+AssetsTools.NET
+bHapticsLib
+MarrowCauldron
+MonoMod*
