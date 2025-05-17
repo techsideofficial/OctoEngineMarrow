@@ -6,6 +6,7 @@ using OctoEngine.MarrowFramework.Base;
 using OctoEngine.MarrowFramework.Developer;
 using OctoEngine.MarrowFramework.ESports;
 using OctoEngine.MarrowFramework.Gameplay;
+using OctoEngine.MarrowFramework.Games.CartridgeMusicPlayer;
 using OctoEngine.MarrowFramework.Games.TS3Game;
 using OctoEngine.MarrowFramework.MissionTypes;
 using OctoEngine.MarrowFramework.Physics;
@@ -13,6 +14,7 @@ using OctoEngine.MarrowFramework.Settings;
 
 namespace OctoEngine.MarrowFramework
 {
+    // Inject shit
     public class Injector
     {
         public static void InjectBehaviors()
@@ -58,7 +60,7 @@ namespace OctoEngine.MarrowFramework
             // MarrowFramework Games - TS3Game - Legacy
             FieldInjector.SerialisationHandler.Inject<MissionCompleteEvent>();
 
-            FieldInjector.SerialisationHandler.Inject<CowbellManager>();
+            FieldInjector.SerialisationHandler.Inject<CowbellManager>(); // todo: rework this crap
             FieldInjector.SerialisationHandler.Inject<CowbellMission>();
             FieldInjector.SerialisationHandler.Inject<FourCowsMission>();
 
@@ -74,7 +76,11 @@ namespace OctoEngine.MarrowFramework
             FieldInjector.SerialisationHandler.Inject<StagecoachGifter>();
 
             // MarrowFramework Games - TS3Game - New
-            FieldInjector.SerialisationHandler.Inject<Townsfolk>();
+            FieldInjector.SerialisationHandler.Inject<Townsfolk>(); // Unused
+
+            // MarrowFramework Games - Astreya
+            FieldInjector.SerialisationHandler.Inject<MarrowFramework.Games.CartridgeMusicPlayer.Cartridge>();
+            FieldInjector.SerialisationHandler.Inject<MarrowFramework.Games.CartridgeMusicPlayer.Console>();
         }
     }
 }

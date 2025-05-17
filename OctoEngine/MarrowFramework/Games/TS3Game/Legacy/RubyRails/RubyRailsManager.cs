@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace AuroraFramework.TS3Game.RubyRails
 {
+    // why did i do this shit? this code is a living hell
     public class RubyRailsManager : MonoBehaviour
     {
         public GameObject RailMusic;

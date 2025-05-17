@@ -1,5 +1,6 @@
 ﻿namespace AuroraFramework.TempStorage
 {
+    // i need a brick wall
     public class TempManager
     {
         public static void WriteTempValue(string name, string value)

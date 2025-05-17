@@ -6,6 +6,7 @@ using Vector3 = UnityEngine.Vector3;
 
 namespace OctoEngine.MarrowFramework.Internal
 {
+    // Oh wow, something actually useful!
     public class SpawnableHelper
     {
         private static Spawnable spawnable;

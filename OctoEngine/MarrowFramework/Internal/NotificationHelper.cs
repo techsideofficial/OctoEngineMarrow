@@ -2,6 +2,7 @@
 
 namespace OctoEngine.MarrowFramework.Internal
 {
+    // typical messy code from techside
     internal class NotificationHelper
     {
         internal static void InfoNotification(string nTitle, string nMsg, float nLength)

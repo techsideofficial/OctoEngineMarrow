@@ -7,3 +7,5 @@ namespace OctoEngine.MarrowFramework.Internal
         public static MelonLogger.Instance logger;
     }
 }
+
+// excuse me, why the fuck did i make this its own class??

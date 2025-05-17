@@ -1,5 +1,6 @@
 ﻿namespace OctoEngine.MarrowFramework.Internal
 {
+    // yes, i know, i'm using XML here
     public class SaveGame
     {
         public static Xml saveDat = new Xml(Path.Combine(Utils.CommonVars.GameDataDir, "SaveData", "DeveloperSave.xml"));

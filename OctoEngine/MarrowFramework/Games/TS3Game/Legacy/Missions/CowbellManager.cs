@@ -9,6 +9,7 @@ namespace AuroraFramework.TS3Game.Missions
         public AudioSource PingSource;
         private static int CowbellCount = 0;
 
+        // this code can go die in a hole. it should have been replaced by now, but idk why it hasn't
         public void TriggerCowbell()
         {
             GetComponent<MissionSystem>().DoMission();

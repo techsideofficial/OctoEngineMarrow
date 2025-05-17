@@ -2,6 +2,7 @@
 
 namespace OctoEngine.MarrowFramework.Console
 {
+    // these aren't even used
     internal static class OMConsoleCommands
     {
         [OMCommand("mission_activate")]

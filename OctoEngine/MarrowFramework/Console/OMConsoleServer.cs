@@ -10,6 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using OctoEngine.MarrowFramework.Internal;
 
+// someone please test this shit and tell me if it works
 namespace OctoEngine.MarrowFramework.Console
 {
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]

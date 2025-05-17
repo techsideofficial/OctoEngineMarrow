@@ -79,6 +79,7 @@ namespace AuroraFramework.TS3Game.Stagecoach
             stagecoachAnimator.StgMoveFromStageToEnd();
         }
 
+        // At this point, I literally have no idea what the fuck I was doing here. Can someone please fix this?
         private void AttachGiftToAnchor()
         {
             GiftBox.GetComponent<StagecoachGiftBox>().GiftTravel();

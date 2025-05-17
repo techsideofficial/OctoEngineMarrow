@@ -1,5 +1,6 @@
 ﻿namespace OctoEngine.MarrowFramework.Internal
 {
+    // Logging interface
     public class ModLog
     {
         internal static void CreateSessionLog()

@@ -5,6 +5,7 @@ using MelonLoader;
 using OctoEngine.MarrowFramework.Internal;
 using UnityEngine;
 
+// kill me pls, this code is ass
 namespace AuroraFramework.TS3Game.Stagecoach
 {
     public class StagecoachGiftBox : MonoBehaviour
