@@ -1,7 +1,9 @@
 ﻿using Miku;
+using OctoEngine.Networking;
 
 namespace OctoEngine.CarmelStreaming
 {
+    // Someone please fix this, my async knowledge is shitty
     public class CarmelStreamedAsset
     {
         public readonly string DefaultType = "bundle";
@@ -9,7 +11,7 @@ namespace OctoEngine.CarmelStreaming
 
         public string Filename { get; set; }
 
-        public byte[] FetchAsset()
+        public async Task<byte[]> FetchAssetAsync()
         {
             string url = String.Concat(
                 StaticGameData.CarmelUrl,
@@ -23,8 +25,9 @@ namespace OctoEngine.CarmelStreaming
 
             // Do network request stuff
             // Return asset as a byte
-
-            return System.Array.Empty<byte>();
+            WebClient client = new WebClient();
+ 
+            return await client.GetAsync<byte[]>(url);
         }
     }
 }

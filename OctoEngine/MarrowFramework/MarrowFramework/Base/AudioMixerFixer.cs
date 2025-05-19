@@ -7,9 +7,9 @@ using Il2CppSLZ.Marrow.Audio;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace OctoEngine.MarrowFramework.Games.Legacy
+namespace OctoEngine.MarrowFramework.Base
 {
-    public class AudioSourceChannel : MonoBehaviour
+    public class AudioMixerFixer : MonoBehaviour
     {
         public enum mixerGroups
         {
@@ -46,7 +46,7 @@ namespace OctoEngine.MarrowFramework.Games.Legacy
 
         private void Awake()
         {
-            this.GetComponent<AudioSource>().outputAudioMixerGroup = GetAudioMixer();
+            GetComponent<AudioSource>().outputAudioMixerGroup = GetAudioMixer();
         }
     }
 }

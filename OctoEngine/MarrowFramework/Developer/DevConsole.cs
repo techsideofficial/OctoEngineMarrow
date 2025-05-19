@@ -14,7 +14,8 @@ namespace OctoEngine.MarrowFramework.Developer
     internal class DevConsole
     {
 #if DEBUG
-        [NEConsoleCommand("audio.reset")]
+        // Disabled this as it causes error spam.
+        // [NEConsoleCommand("audio.reset")] 
 #endif
         public static void AudioReset()
         {

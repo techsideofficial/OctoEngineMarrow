@@ -131,6 +131,7 @@ namespace OctoEngine.MarrowFramework.Base
             PlayNextClip();
         }
 
+        // This has the potential to cause error spam when a level is unloaded.
         private IEnumerator DoStopMusic()
         {
             while (a.volume > 0)

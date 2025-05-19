@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OctoApp>
+  <Miku>
+    <AppId>arparec-toy-story-3-the-video-game</AppId>
+    <AppName>Toy Story 3: The Video Game</AppName>
+    <AppVersion>game_dev</AppVersion>
+    <AppDeveloper>ArpaRec</AppDeveloper>
+    <Network>
+        <Api>https://prod-freya.arparec.xyz/api</Api>
+        <Starlight>https://prod-freya.arparec.xyz/api/starlight</Starlight>
+        <Carmel>https://carmelcdn.arparec.xyz/streamed</Carmel>
+    </Network>
+  </Miku>
+</OctoApp>

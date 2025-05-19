@@ -18,17 +18,38 @@ namespace OctoEngine.MarrowFramework.MissionTypes
     {
         public int RequiredObjectCount;
         public BoneTagReference ObjectTag;
-        public AudioSource PingSFX;
+        public AudioClip ObjectCollectPing;
 
         private int _currentObjectCount;
+        private bool _missionComplete;
+        private AudioSource a;
+
+        private void Start()
+        {
+            a = GameObjectHelpers.CreateAudioSource(AudioMixerFixer.mixerGroups.impact);
+            a.clip = ObjectCollectPing;
+            _missionComplete = false;
+        }
+
+        public void ResetMission()
+        {
+            _currentObjectCount = 0;
+            _missionComplete = false;
+            ModLog.LogMessage("Mission reset. Current count: " + _currentObjectCount);
+        }
 
         public void ObjectEnteredZone(MarrowEntity entity)
         {
-            _currentObjectCount++;
             ModLog.LogMessage("Object entered zone. Current count: " + _currentObjectCount);
-            PingSFX.Play();
+            if (!_missionComplete)
+            {
+                a.Play();
+                _currentObjectCount++;
+            }
+
             if (_currentObjectCount >= RequiredObjectCount)
             {
+                _missionComplete = true;
                 GetComponent<MissionSystem>().DoMission();
                 _currentObjectCount = 0; // Reset the count after mission completion
             }
