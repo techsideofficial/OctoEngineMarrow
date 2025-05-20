@@ -14,6 +14,12 @@ namespace OctoEngine.MarrowFramework.Internal
             npcVocals = 5
         }
 
+        public enum mixers
+        {
+            audio_Music = 0,
+            audio_SFX = 1
+        }
+
         public class ES_TeamInfo
         {
             public string TeamId;
