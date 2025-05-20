@@ -14,7 +14,8 @@ namespace Miku
         public static readonly string ApiUrl = XmlFile.ReadData("Miku/Network/Api");
         public static readonly string StarlightUrl = XmlFile.ReadData("Miku/Network/Starlight");
         public static readonly string CarmelUrl = XmlFile.ReadData("Miku/Network/Carmel");
-        public static readonly string CustomBasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "AppData", "LocalLow", "Stress Level Zero", "BONELAB", "Mods", "ArpaRec.TS3Game", "Octo", AppId);
+        public static readonly string CustomBasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Octo", AppId);
+        // public static readonly string CustomBasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "AppData", "LocalLow", "Stress Level Zero", "BONELAB", "Octo", AppId);
         // BONELAB PATH: Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "AppData", "LocalLow", "Stress Level Zero", "BONELAB");
     }
 }

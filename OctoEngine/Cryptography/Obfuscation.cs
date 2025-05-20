@@ -4,6 +4,7 @@
     {
         public static string Caesar(string source, Int16 shift)
         {
+            /* Thunderstore no like this
             var maxChar = Convert.ToInt32(char.MaxValue);
             var minChar = Convert.ToInt32(char.MinValue);
 
@@ -26,6 +27,8 @@
             }
 
             return new string(buffer);
+            */
+            return source;
         }
     }
 }

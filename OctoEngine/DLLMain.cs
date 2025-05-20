@@ -5,7 +5,7 @@ using BoneLib;
 using System.Collections;
 using OctoEngine.MarrowFramework.Console;
 using OctoEngine.MarrowFramework;
-using OctoEngine.Audio;
+// using OctoEngine.Audio;
 using OctoEngine.Utils;
 
 namespace OctoEngine
@@ -38,8 +38,8 @@ namespace OctoEngine
             if (DebugConfig.ReadData("DebugSettings/EnableFMOD") == "1")
             {
                 HarmonyPatchHelper.ApplyPatches(MelonAssembly.Assembly);
-                OCppConstants.fmodsys = new FMODAudioSystem();
-                OCppConstants.fmodsys.LoadBanks(CommonVars.DataDir);
+                // OCppConstants.fmodsys = new FMODAudioSystem();
+                // OCppConstants.fmodsys.LoadBanks(CommonVars.DataDir);
             }
         }
 

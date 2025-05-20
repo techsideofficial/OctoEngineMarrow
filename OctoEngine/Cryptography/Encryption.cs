@@ -11,6 +11,7 @@ namespace OctoEngine.Cryptography
     {
         public static byte[] EncryptDataWithAes(byte[] data, string keyBase64, string vectorBase64)
         {
+            /* Thunderstore no like this
             using (Aes aesAlgorithm = Aes.Create())
             {
                 aesAlgorithm.Key = Convert.FromBase64String(keyBase64);
@@ -35,12 +36,16 @@ namespace OctoEngine.Cryptography
                     return ms.ToArray();
                 }
             }
+            */
+
+            return new byte[0];
         }
 
 
 
         public static byte[] DecryptDataWithAes(byte[] cipher, string keyBase64, string vectorBase64)
         {
+            /* Thunderstore no like this
             using (Aes aesAlgorithm = Aes.Create())
             {
                 aesAlgorithm.Key = Convert.FromBase64String(keyBase64);
@@ -67,7 +72,8 @@ namespace OctoEngine.Cryptography
                         }
                     }
                 }
-            }
+            */
+            return new byte[0];
         }
     }
 }

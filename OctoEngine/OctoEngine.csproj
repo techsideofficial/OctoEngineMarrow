@@ -8,28 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Audio\**" />
     <Compile Remove="bin\**" />
+    <EmbeddedResource Remove="Audio\**" />
     <EmbeddedResource Remove="bin\**" />
+    <None Remove="Audio\**" />
     <None Remove="bin\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="MarrowFramework\Internal\TempManagerProxy.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Audio\FMOD\fmod.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Audio\FMOD\fmodL.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Audio\FMOD\fmodstudio.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Audio\FMOD\fmodstudioL.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
 
   <ItemGroup>
