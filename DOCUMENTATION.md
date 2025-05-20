@@ -2,6 +2,8 @@
 
 ## Getting Started
 Please see the example `octo_config.xml`, and set all the values that you need. This file is placed next to the DLL.
+> [!WARNING]
+> Do NOT change the `AppId` property in `octo_config.xml`!
 
 ## Methods
 ### Logging
