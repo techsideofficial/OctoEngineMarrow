@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OctoApp>
+  <NetworkSettings>
+    <OnlineMode>0</OnlineMode>
+    <ServiceUrl>https://prod-freya.arparec.xyz</ServiceUrl>
+    <NetVersion>NOVERSION</NetVersion>
+  </NetworkSettings>
+</OctoApp>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OctoApp>
+  <AppName>Toy Story 3: The Video Game</AppName>
+  <EngineVersion>Octo_Custom_Toy Story 3: The Video Game</EngineVersion>
+  <Settings>
+    <BranchTreatment>dev_0001</BranchTreatment>
+  </Settings>
+</OctoApp>

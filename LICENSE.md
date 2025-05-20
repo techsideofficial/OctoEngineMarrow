@@ -1,4 +1,4 @@
-Repository Name: OctoEngineMarrow
+Repository Name: OctoEngine (OctoEngineMarrow)
 
 Copyright © 2025 TechSide
 

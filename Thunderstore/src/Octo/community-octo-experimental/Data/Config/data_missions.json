@@ -1,0 +1,9 @@
+[
+    {
+        "id": "mission_example",
+        "name": "Example Name",
+        "description": "Example Description.",
+        "coins_awarded": 69420,
+        "available": true
+    }
+]

@@ -38,7 +38,7 @@ namespace OctoEngine.Cryptography
             }
             */
 
-            return new byte[0];
+            return data;
         }
 
 
@@ -73,7 +73,7 @@ namespace OctoEngine.Cryptography
                     }
                 }
             */
-            return new byte[0];
+            return cipher;
         }
     }
 }

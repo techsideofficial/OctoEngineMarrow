@@ -116,4 +116,8 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="cd &quot;$(SolutionDir)BuildTools\&quot;&#xD;&#xA;call &quot;build.bat&quot;" />
+  </Target>
+
 </Project>

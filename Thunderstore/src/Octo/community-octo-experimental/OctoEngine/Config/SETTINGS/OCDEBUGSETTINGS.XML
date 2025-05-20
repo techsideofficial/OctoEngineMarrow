@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OctoApp>
+  <DebugSettings>
+    <VisualizeHitboxes>0</VisualizeHitboxes>
+    <ShowDebugObjects>0</ShowDebugObjects>
+    <EnableConsole>0</EnableConsole>
+    <EnableFMOD>0</EnableFMOD>
+  </DebugSettings>
+</OctoApp>
