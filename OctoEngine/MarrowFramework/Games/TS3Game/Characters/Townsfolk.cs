@@ -1,7 +1,7 @@
 ﻿using OctoEngine.MarrowFramework.Base;
 using UnityEngine;
 
-namespace OctoEngine.MarrowFramework.Games.TS3Game
+namespace OctoEngine.MarrowFramework.Games.TS3Game.Character
 {
     public class Townsfolk : MonoBehaviour
     {

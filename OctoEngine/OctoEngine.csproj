@@ -8,16 +8,52 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Audio\**" />
     <Compile Remove="bin\**" />
-    <EmbeddedResource Remove="Audio\**" />
     <EmbeddedResource Remove="bin\**" />
-    <None Remove="Audio\**" />
     <None Remove="bin\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="MarrowFramework\Internal\TempManagerProxy.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Icons\alert-fill-12.png" />
+    <None Remove="Assets\Icons\arparec.png" />
+    <None Remove="Assets\Icons\bug-24.png" />
+    <None Remove="Assets\Icons\check-circle-fill-12.png" />
+    <None Remove="Assets\Icons\cpu-24.png" />
+    <None Remove="Assets\Icons\eye-24.png" />
+    <None Remove="Assets\Icons\eye-slash-24.png" />
+    <None Remove="Assets\Icons\globe-24.png" />
+    <None Remove="Assets\Icons\no-entry-fill-12.png" />
+    <None Remove="Assets\Icons\organization-24.png" />
+    <None Remove="Assets\Icons\rss-24.png" />
+    <None Remove="Assets\Icons\shield-check-24.png" />
+    <None Remove="Assets\Icons\terminal-24.png" />
+    <None Remove="Assets\Icons\unread-24.png" />
+    <None Remove="Assets\Icons\x-circle-fill-12.png" />
+    <None Remove="Assets\Sounds\sting_ep_achievement.wav" />
+    <None Remove="Assets\Sounds\sting_ep_outro.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Icons\alert-fill-12.png" />
+    <EmbeddedResource Include="Assets\Icons\arparec.png" />
+    <EmbeddedResource Include="Assets\Icons\bug-24.png" />
+    <EmbeddedResource Include="Assets\Icons\cpu-24.png" />
+    <EmbeddedResource Include="Assets\Icons\eye-24.png" />
+    <EmbeddedResource Include="Assets\Icons\eye-slash-24.png" />
+    <EmbeddedResource Include="Assets\Icons\globe-24.png" />
+    <EmbeddedResource Include="Assets\Icons\no-entry-fill-12.png" />
+    <EmbeddedResource Include="Assets\Icons\organization-24.png" />
+    <EmbeddedResource Include="Assets\Icons\rss-24.png" />
+    <EmbeddedResource Include="Assets\Icons\shield-check-24.png" />
+    <EmbeddedResource Include="Assets\Icons\terminal-24.png" />
+    <EmbeddedResource Include="Assets\Icons\unread-24.png" />
+    <EmbeddedResource Include="Assets\Icons\x-circle-fill-12.png" />
+    <EmbeddedResource Include="Assets\Sounds\sting_ep_achievement.wav" />
+    <EmbeddedResource Include="Assets\Sounds\sting_ep_outro.wav" />
   </ItemGroup>
 
   <ItemGroup>
@@ -102,18 +138,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Assets\Icons.Designer.cs">
-      <DependentUpon>Icons.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Assets\Icons.resx">
-      <LastGenOutput>Icons.Designer.cs</LastGenOutput>
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Icons\check-circle-fill-12.png" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">

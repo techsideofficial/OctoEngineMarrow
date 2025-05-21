@@ -8,9 +8,12 @@ using OctoEngine.MarrowFramework.ESports;
 using OctoEngine.MarrowFramework.Gameplay;
 using OctoEngine.MarrowFramework.Games.CartridgeMusicPlayer;
 using OctoEngine.MarrowFramework.Games.TS3Game;
+using OctoEngine.MarrowFramework.Games.TS3Game.Character;
+using OctoEngine.MarrowFramework.Games.TS3Game.Characters;
 using OctoEngine.MarrowFramework.MissionTypes;
 using OctoEngine.MarrowFramework.Physics;
 using OctoEngine.MarrowFramework.Settings;
+using Timer = OctoEngine.MarrowFramework.Base.Timer;
 
 namespace OctoEngine.MarrowFramework
 {
@@ -25,12 +28,14 @@ namespace OctoEngine.MarrowFramework
             // MarrowFramework Base
             FieldInjector.SerialisationHandler.Inject<AICharacter>();
             FieldInjector.SerialisationHandler.Inject<AreaGates>();
+            FieldInjector.SerialisationHandler.Inject<AudioMixerFixer>();
             FieldInjector.SerialisationHandler.Inject<AudioSystem>();
             FieldInjector.SerialisationHandler.Inject<DedupeCache>();
             FieldInjector.SerialisationHandler.Inject<DeveloperWaypoint>();
             FieldInjector.SerialisationHandler.Inject<MissionSystem>();
             FieldInjector.SerialisationHandler.Inject<NotificationSender>();
             FieldInjector.SerialisationHandler.Inject<OctoPlayerRig>();
+            FieldInjector.SerialisationHandler.Inject<Timer>();
 
             // MarrowFramework Developer
             FieldInjector.SerialisationHandler.Inject<EngineDebug>();
@@ -48,6 +53,7 @@ namespace OctoEngine.MarrowFramework
 
             // MarrowFramework MissionTypes
             FieldInjector.SerialisationHandler.Inject<MissionType_CollectObjects>();
+            FieldInjector.SerialisationHandler.Inject<MissionType_TimeTrial>();
             FieldInjector.SerialisationHandler.Inject<MissionType_ZoneContainment>();
 
             // MarrowFramework Physics
@@ -75,8 +81,10 @@ namespace OctoEngine.MarrowFramework
             FieldInjector.SerialisationHandler.Inject<StagecoachManager>();
             FieldInjector.SerialisationHandler.Inject<StagecoachGifter>();
 
-            // MarrowFramework Games - TS3Game - New
+            // MarrowFramework Games - TS3Game - Characters
             FieldInjector.SerialisationHandler.Inject<Townsfolk>(); // Unused
+            FieldInjector.SerialisationHandler.Inject<Bullseye>(); // Unused
+            FieldInjector.SerialisationHandler.Inject<Cow>(); // Unused
 
             // MarrowFramework Games - Astreya
             FieldInjector.SerialisationHandler.Inject<MarrowFramework.Games.CartridgeMusicPlayer.Cartridge>();
