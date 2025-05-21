@@ -22,14 +22,14 @@ namespace OctoEngine.Assets.Configs {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Environment {
+    internal class Discord {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Environment() {
+        internal Discord() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace OctoEngine.Assets.Configs {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OctoEngine.Assets.Configs.Environment", typeof(Environment).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OctoEngine.Assets.Configs.Discord", typeof(Discord).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,11 +61,11 @@ namespace OctoEngine.Assets.Configs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to null.
+        ///   Looks up a localized string similar to 0.
         /// </summary>
-        internal static string apikey_configcatclient {
+        internal static string ClientId {
             get {
-                return ResourceManager.GetString("apikey_configcatclient", resourceCulture);
+                return ResourceManager.GetString("ClientId", resourceCulture);
             }
         }
     }

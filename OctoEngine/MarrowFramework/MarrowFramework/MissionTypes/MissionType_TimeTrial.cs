@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MelonLoader;
 using OctoEngine.MarrowFramework.Base;
-using OctoEngine.MarrowFramework.Internal;
+using OctoEngine.MarrowFramework.Internal.Helpers;
 using UnityEngine;
 
 namespace OctoEngine.MarrowFramework.MissionTypes

@@ -1,7 +1,7 @@
-﻿namespace OctoEngine.MarrowFramework.Internal
+﻿namespace OctoEngine.MarrowFramework.Internal.Helpers
 {
     // yes, i know, i'm using XML here
-    public class SaveGame
+    public class SaveGameHelper
     {
         public static Xml saveDat = new Xml(Path.Combine(Utils.CommonVars.GameDataDir, "SaveData", "DeveloperSave.xml"));
         public static void WriteValue(string key, string value)

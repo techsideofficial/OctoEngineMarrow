@@ -1,4 +1,5 @@
 ﻿using OctoEngine.MarrowFramework.Internal;
+using OctoEngine.MarrowFramework.Internal.Helpers;
 
 namespace OctoEngine.MarrowFramework.Console
 {
@@ -11,8 +12,8 @@ namespace OctoEngine.MarrowFramework.Console
             if (args.Length == 0) return "Error: No mission ID provided.";
             var missionId = args[0];
 
-            SaveGame.WriteValue("Missions/" + missionId + "/State", "1");
-            NotificationHelper.InfoNotification(MissionManager.GetMission(missionId).Name, MissionManager.GetMission(missionId).Description, 5);
+            SaveGameHelper.WriteValue("Missions/" + missionId + "/State", "1");
+            NotificationHelper.InfoNotification(MissionHelper.GetMission(missionId).Name, MissionHelper.GetMission(missionId).Description, 5);
             ModLog.LogMessage(String.Concat("Successfully set missionstate of ", missionId, " to InProgress"));
 
             return $"Activated mission '{missionId}' unlocked.";
@@ -21,10 +22,10 @@ namespace OctoEngine.MarrowFramework.Console
         [OMCommand("mission_activateall")]
         public static string ActivateAllMissions(string[] args)
         {
-            List<Mission> missions = MissionManager.LoadMissionData();
+            List<Mission> missions = MissionHelper.LoadMissionData();
             foreach (Mission mission in missions)
             {
-                SaveGame.WriteValue("Missions/" + mission.Id + "/State", "1");
+                SaveGameHelper.WriteValue("Missions/" + mission.Id + "/State", "1");
             }
             return "All missions activated.";
         }

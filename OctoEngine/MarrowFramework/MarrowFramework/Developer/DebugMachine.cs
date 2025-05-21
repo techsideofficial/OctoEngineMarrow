@@ -4,7 +4,7 @@ using TMPro;
 using Il2CppTMPro;
 #endif
 using OctoEngine.MarrowFramework.Base;
-using OctoEngine.MarrowFramework.Internal;
+using OctoEngine.MarrowFramework.Internal.Helpers;
 using UnityEngine;
 
 namespace OctoEngine.MarrowFramework.Developer
@@ -24,7 +24,7 @@ namespace OctoEngine.MarrowFramework.Developer
         private void Start()
         {
             _missionGiver = GetComponentInChildren<MissionSystem>();
-            _MList = MissionManager.LoadMissionData();
+            _MList = MissionHelper.LoadMissionData();
             _currentMissionCounter = 0;
 
             if (_MList != null && _MList.Count > 0)

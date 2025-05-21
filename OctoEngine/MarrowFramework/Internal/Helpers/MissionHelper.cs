@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace OctoEngine.MarrowFramework.Internal
+namespace OctoEngine.MarrowFramework.Internal.Helpers
 {
-    internal class MissionManager
+    internal class MissionHelper
     {
         internal static List<Mission> LoadMissionData()
         {
@@ -30,18 +30,18 @@ namespace OctoEngine.MarrowFramework.Internal
 
         internal static void GiveMission(string MissionId)
         {
-            if (MissionManager.GetMission(MissionId).Available)
+            if (GetMission(MissionId).Available)
             {
-                int? _tempMissionState = Int32.Parse(SaveGame.ReadData("Missions/" + MissionId + "/State"));
+                int? _tempMissionState = int.Parse(SaveGameHelper.ReadData("Missions/" + MissionId + "/State"));
                 if (_tempMissionState != 1 && _tempMissionState != 2 && _tempMissionState != 3)
                 {
-                    SaveGame.WriteValue("Missions/" + MissionId + "/State", "1");
-                    NotificationHelper.InfoNotification(MissionManager.GetMission(MissionId).Name, MissionManager.GetMission(MissionId).Description, 5);
-                    ModLog.LogMessage(String.Concat("Successfully set missionstate of ", MissionId, " to InProgress"));
+                    SaveGameHelper.WriteValue("Missions/" + MissionId + "/State", "1");
+                    NotificationHelper.InfoNotification(GetMission(MissionId).Name, GetMission(MissionId).Description, 5);
+                    ModLog.LogMessage(string.Concat("Successfully set missionstate of ", MissionId, " to InProgress"));
                 }
                 else
                 {
-                    ModLog.LogWarn(String.Concat("Cannot give mission ", MissionId, "."));
+                    ModLog.LogWarn(string.Concat("Cannot give mission ", MissionId, "."));
                 }
             }
             else
@@ -53,19 +53,19 @@ namespace OctoEngine.MarrowFramework.Internal
 
     internal class Mission
     {
-        [Newtonsoft.Json.JsonProperty("id")]
+        [JsonProperty("id")]
         public string Id { get; set; }
 
-        [Newtonsoft.Json.JsonProperty("name")]
+        [JsonProperty("name")]
         public string Name { get; set; }
 
-        [Newtonsoft.Json.JsonProperty("description")]
+        [JsonProperty("description")]
         public string Description { get; set; }
 
-        [Newtonsoft.Json.JsonProperty("coins_awarded")]
+        [JsonProperty("coins_awarded")]
         public int CoinsAwarded { get; set; }
 
-        [Newtonsoft.Json.JsonProperty("available")]
+        [JsonProperty("available")]
         public bool Available { get; set; }
     }
 }

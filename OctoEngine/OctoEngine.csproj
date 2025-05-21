@@ -142,17 +142,44 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Assets\Configs\Environment.Designer.cs">
+    <Compile Update="Assets\Configs\App.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Environment.resx</DependentUpon>
+      <DependentUpon>App.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Assets\Configs\ConfigCat.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ConfigCat.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Assets\Configs\Discord.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Discord.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Assets\Configs\Network.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Network.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Assets\Configs\Environment.resx">
+    <EmbeddedResource Update="Assets\Configs\App.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Environment.Designer.cs</LastGenOutput>
+      <LastGenOutput>App.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Assets\Configs\ConfigCat.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ConfigCat.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Assets\Configs\Discord.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Discord.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Assets\Configs\Network.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Network.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

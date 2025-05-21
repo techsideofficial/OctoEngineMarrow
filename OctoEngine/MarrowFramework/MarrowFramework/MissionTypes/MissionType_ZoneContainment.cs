@@ -7,6 +7,7 @@ using Il2CppSLZ.Marrow.Interaction;
 using Il2CppSLZ.Marrow.Warehouse;
 using OctoEngine.MarrowFramework.Base;
 using OctoEngine.MarrowFramework.Internal;
+using OctoEngine.MarrowFramework.Internal.Helpers;
 using UnityEngine;
 
 namespace OctoEngine.MarrowFramework.MissionTypes

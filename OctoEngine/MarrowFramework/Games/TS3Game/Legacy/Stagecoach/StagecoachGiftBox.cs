@@ -3,6 +3,7 @@ using Il2CppSLZ.Bonelab;
 using Il2CppSLZ.Marrow.Warehouse;
 using MelonLoader;
 using OctoEngine.MarrowFramework.Internal;
+using OctoEngine.MarrowFramework.Internal.Helpers;
 using UnityEngine;
 
 // kill me pls, this code is ass
@@ -50,7 +51,7 @@ namespace AuroraFramework.TS3Game.Stagecoach
 
             if (UseSaveSystem)
             {
-                SaveGame.WriteValue("StagecoachDeliveredItems", _spawnable.Barcode.ToString());
+                SaveGameHelper.WriteValue("StagecoachDeliveredItems", _spawnable.Barcode.ToString());
             }
         }
 

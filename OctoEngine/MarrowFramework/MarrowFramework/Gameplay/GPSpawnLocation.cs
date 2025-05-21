@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Il2CppSLZ.Marrow.Warehouse;
 using MelonLoader;
-using OctoEngine.MarrowFramework.Internal;
+using OctoEngine.MarrowFramework.Internal.Helpers;
 using UnityEngine;
 
 namespace OctoEngine.MarrowFramework.Gameplay

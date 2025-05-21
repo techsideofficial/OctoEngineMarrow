@@ -1,6 +1,7 @@
 ﻿using Il2CppSLZ.Marrow.Interaction;
 using OctoEngine.MarrowFramework;
 using OctoEngine.MarrowFramework.Internal;
+using OctoEngine.MarrowFramework.Internal.Helpers;
 using UnityEngine;
 
 namespace AuroraFramework.TS3Game.Missions
@@ -17,7 +18,7 @@ namespace AuroraFramework.TS3Game.Missions
 
         public void TriggerCowbell()
         {
-            if (SaveGame.ReadData("Missions/" + "mission_findcowbells" + "/State") == "1")
+            if (SaveGameHelper.ReadData("Missions/" + "mission_findcowbells" + "/State") == "1")
             {
                 CowBellMan.TriggerCowbell();
                 GetComponentInParent<MarrowEntity>().Despawn();

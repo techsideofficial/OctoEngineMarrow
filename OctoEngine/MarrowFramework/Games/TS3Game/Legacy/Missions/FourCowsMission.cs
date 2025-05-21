@@ -1,6 +1,7 @@
 ﻿using Il2CppSLZ.Marrow.Interaction;
 using OctoEngine.MarrowFramework.Base;
 using OctoEngine.MarrowFramework.Internal;
+using OctoEngine.MarrowFramework.Internal.Helpers;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +17,7 @@ namespace AuroraFramework.TS3Game.Missions
         {
             MissionSystem MissionComplete = GetComponent<MissionSystem>();
 
-            if (spawnable.Tags.Tags.Count > 0 && !CowTags.Contains(spawnable.Tags.Tags[0].Barcode.ID) && SaveGame.ReadData("Missions/" + "mission_delivercows1" + "/State") == "1")
+            if (spawnable.Tags.Tags.Count > 0 && !CowTags.Contains(spawnable.Tags.Tags[0].Barcode.ID) && SaveGameHelper.ReadData("Missions/" + "mission_delivercows1" + "/State") == "1")
             {
                 CowTags.Add(spawnable.Tags.Tags[0].Barcode.ID);
                 MissionComplete.DoMission();

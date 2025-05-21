@@ -5,10 +5,5 @@
     <AppName>Unnamed Mod</AppName>
     <AppVersion>game_pub</AppVersion>
     <AppDeveloper>Unnamed Author</AppDeveloper>
-    <Network>
-        <Api>https://prod-freya.arparec.xyz/api</Api>
-        <Starlight>https://prod-freya.arparec.xyz/api/starlight</Starlight>
-        <Carmel>https://carmelcdn.arparec.xyz/streamed</Carmel>
-    </Network>
   </Miku>
 </OctoApp>

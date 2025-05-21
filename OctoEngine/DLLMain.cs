@@ -7,6 +7,7 @@ using OctoEngine.MarrowFramework.Console;
 using OctoEngine.MarrowFramework;
 // using OctoEngine.Audio;
 using OctoEngine.Utils;
+using OctoEngine.MarrowFramework.Internal.Helpers;
 
 namespace OctoEngine
 {
@@ -25,6 +26,7 @@ namespace OctoEngine
             ModLog.LogMessage("Mod is ready!");
             DebugConfig = new Xml(Path.Combine(Utils.CommonVars.DataDir, "Config", "SETTINGS", "OCDEBUGSETTINGS.XML"));
 
+            Net.CacheNS("https://ns.arparec.xyz");
             AsyncBootstrap();
         }
 

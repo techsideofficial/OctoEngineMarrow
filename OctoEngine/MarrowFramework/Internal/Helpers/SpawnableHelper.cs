@@ -4,7 +4,7 @@ using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
 
-namespace OctoEngine.MarrowFramework.Internal
+namespace OctoEngine.MarrowFramework.Internal.Helpers
 {
     // Oh wow, something actually useful!
     public class SpawnableHelper

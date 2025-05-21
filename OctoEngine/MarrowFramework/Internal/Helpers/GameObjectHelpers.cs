@@ -7,7 +7,7 @@ using OctoEngine.MarrowFramework.Base;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace OctoEngine.MarrowFramework.Internal
+namespace OctoEngine.MarrowFramework.Internal.Helpers
 {
     internal class GameObjectHelpers
     {

@@ -1,4 +1,4 @@
-﻿using OctoEngine.MarrowFramework.Internal;
+﻿using OctoEngine.MarrowFramework.Internal.Helpers;
 using UnityEngine;
 
 namespace OctoEngine.MarrowFramework.Base

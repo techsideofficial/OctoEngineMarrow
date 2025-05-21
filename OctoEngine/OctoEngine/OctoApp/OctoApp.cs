@@ -145,7 +145,7 @@ namespace OctoEngine
                 {
                     WebClient client = new();
                     string latestAgreedVersion = File.ReadAllText(eulaVerPath);
-                    EULAObject eulaResponse = await client.GetAsync<EULAObject>(StaticGameData.ApiUrl + "/eula?AgreedVersion=" + latestAgreedVersion + "&AppId=" + StaticGameData.AppId);
+                    EULAObject eulaResponse = await client.GetAsync<EULAObject>(Assets.Configs.Network.url_api + "/eula?AgreedVersion=" + latestAgreedVersion + "&AppId=" + Assets.Configs.App.app_id);
                     if (eulaResponse.Text != "NONEWEULA")
                     {
                         Logging.LogMessage("EULA: " + eulaResponse.Text);

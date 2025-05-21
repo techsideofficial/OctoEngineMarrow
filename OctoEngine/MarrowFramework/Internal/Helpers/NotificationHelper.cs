@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace OctoEngine.MarrowFramework.Internal
+namespace OctoEngine.MarrowFramework.Internal.Helpers
 {
     // typical messy code from techside
     internal class NotificationHelper

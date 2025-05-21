@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HarmonyLib;
 
-namespace OctoEngine.MarrowFramework.Internal
+namespace OctoEngine.MarrowFramework.Internal.Helpers
 {
     internal class HarmonyPatchHelper
     {
