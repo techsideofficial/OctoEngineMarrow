@@ -141,6 +141,21 @@
     <EmbeddedResource Include="Assets\Icons\check-circle-fill-12.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Assets\Configs\Environment.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Environment.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Assets\Configs\Environment.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Environment.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="cd &quot;$(SolutionDir)BuildTools\&quot;&#xD;&#xA;call &quot;build.bat&quot;" />
   </Target>

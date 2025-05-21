@@ -9,8 +9,11 @@ namespace OctoEngine.Discord.Helpers
 {
     public static partial class AccountManagement
     {
-        [ObfuscatedString("1333302713492045865")]
-        private static partial string OClientId(); // huh????? was broken before!
+        // Remove obfuscation, why the fuck did I leave it in????
+        // [ObfuscatedString("1333302713492045865")]
+        // private static partial string OClientId(); // huh????? was broken before!
+
+        private static string OClientId = "1333302713492045865";
 
         public static string Authorise()
         {
