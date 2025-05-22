@@ -27,6 +27,23 @@ namespace OctoEngine.Networking
             });
         }
 
+        public void GetBytes(string url, Action<byte[]> onSuccess, Action<Exception> onError = null)
+        {
+            Task.Run(async () =>
+            {
+                try
+                {
+                    var response = await client.GetAsync(url);
+                    byte[] content = await response.Content.ReadAsByteArrayAsync();
+                    onSuccess?.Invoke(content);
+                }
+                catch (Exception ex)
+                {
+                    onError?.Invoke(ex);
+                }
+            });
+        }
+
         public void Post(string url, string data, string contentType, Action<string> onSuccess, Action<Exception> onError = null)
         {
             Task.Run(async () =>

@@ -74,7 +74,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\3rdPartyLibs\NEDebug\NEDebug.csproj" />
-    <ProjectReference Include="..\Miku\Miku.csproj" />
   </ItemGroup>
 
   <ItemGroup>

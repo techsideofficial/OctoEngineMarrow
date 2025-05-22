@@ -1,4 +1,6 @@
 ﻿using Miku;
+using OctoEngine.Formats;
+using OctoEngine.MarrowFramework.Internal;
 using OctoEngine.Networking;
 
 namespace OctoEngine.CarmelStreaming
@@ -11,23 +13,43 @@ namespace OctoEngine.CarmelStreaming
 
         public string Filename { get; set; }
 
-        public async Task<byte[]> FetchAssetAsync()
+        public static byte[] GetAsset(string Type, string AccessToken, string Filename)
         {
             string url = String.Concat(
                 StaticGameData.CarmelUrl,
                 "?type=",
-                DefaultType,
+                Type,
                 "&filename=",
                 Filename,
                 "&access_token=",
                 AccessToken
                 );
 
+            byte[] tempResponse = Array.Empty<byte>();
             // Do network request stuff
             // Return asset as a byte
-            WebClient client = new WebClient();
- 
-            return await client.GetAsync<byte[]>(url);
+            if (Cache.CheckCache(url))
+            {
+                return Cache.ReadCache(url);
+            } 
+            else
+            {
+                var client = new NetClient();
+
+                ModLog.LogMessage("Fetched ");
+                client.GetBytes(url,
+                    onSuccess: response => tempResponse = response,
+                    onError: ex => Net.INetError(ex.Message)
+                );
+
+                return HandleCarmelResponse(url, tempResponse);
+            }
+        }
+
+        private static byte[] HandleCarmelResponse(string url, byte[] response)
+        {
+            Cache.WriteCache(url, response);
+            return response;
         }
     }
 }

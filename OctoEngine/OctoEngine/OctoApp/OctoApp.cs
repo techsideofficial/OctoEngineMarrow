@@ -79,7 +79,7 @@ namespace OctoEngine
             // List<string> RequiredDirs = new List<string> { "Temp", "Logs", "Config", "Crash" }; // Required directories.
 
             // DEBUG ONLY!!
-            List<string> RequiredDirs = new List<string> { "Temp", "Logs", "Config" };
+            List<string> RequiredDirs = new List<string> { "Temp", "Logs", "Config", "NetCache" };
 
             if (!Directory.Exists(Path.Combine(Utils.CommonVars.ApplicationPath, "OctoEngine")))
             {
